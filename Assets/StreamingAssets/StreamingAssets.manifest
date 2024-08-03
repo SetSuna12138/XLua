@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2661281948
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/prefab/cube.prefab.ab
+      Dependencies: {}
+    Info_1:
+      Name: ui/prefab/image.prefab.ab
+      Dependencies: {}
+    Info_2:
+      Name: "ui/res/\u5FAE\u4FE1\u56FE\u7247_20240801120435.png.ab"
+      Dependencies: {}
+    Info_3:
+      Name: "ui/res/\u5FAE\u4FE1\u56FE\u7247_20240801120536.png.ab"
+      Dependencies: {}
