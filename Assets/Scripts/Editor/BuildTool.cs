@@ -37,7 +37,7 @@ public class BuildTool : Editor
         {
             if (files[i].EndsWith(".meta"))
                 continue;
-
+           
             AssetBundleBuild assetBundle = new AssetBundleBuild();
             string fileName = PathUtil.GetStanderPath(files[i]);
             Debug.Log("files : " + fileName);
