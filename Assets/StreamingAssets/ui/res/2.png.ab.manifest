@@ -1,17 +1,19 @@
 ManifestFileVersion: 0
-CRC: 3141896071
+CRC: 1977998373
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4a3b00a2d30ab58225a703c5618bcf50
+    Hash: 1ed981d6e6638effec598992e6c1702e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ff414f606ea1972259b080d7bcf51689
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- "Assets/BuildResources/UI/Res/\u5FAE\u4FE1\u56FE\u7247_20240801120536.png"
+- Assets/BuildResources/UI/Res/2.png
 Dependencies: []
