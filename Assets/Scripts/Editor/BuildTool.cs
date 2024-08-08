@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 
 ///<summary>
-///
+///´ò°ü
 ///</summary>
 public class BuildTool : Editor
 {
@@ -29,6 +29,12 @@ public class BuildTool : Editor
     }
     #endregion
 
+    [MenuItem("Tools/Delete")]
+    static void Dele()
+    {
+        if(Directory.Exists(PathUtil.BuildOutPath))
+            Directory.Delete(PathUtil.BuildOutPath, true);  
+    }
 
     static void Build(BuildTarget target)
     {
@@ -66,12 +72,14 @@ public class BuildTool : Editor
             target
         );
 
+
     }
 
     private static void CreateFiles()
     {
-        if (Directory.Exists(PathUtil.BuildOutPath))
-            Directory.Delete(PathUtil.BuildOutPath, true);
-        Directory.CreateDirectory(PathUtil.BuildOutPath);
+        if (!Directory.Exists(PathUtil.BuildOutPath))
+        {
+            Directory.CreateDirectory(PathUtil.BuildOutPath);
+        }
     }
 }

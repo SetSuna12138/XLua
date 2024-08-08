@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 ///<summary>
-///
+///目录集
 ///</summary>
 public static class PathUtil
 {
@@ -15,6 +15,12 @@ public static class PathUtil
 
     //bundle 输出目录
     public static readonly string BuildOutPath = Application.streamingAssetsPath;
+
+    //只读目录
+    public static readonly string readPath = Application.streamingAssetsPath;
+
+    //读写目录
+    public static readonly string readWritePath = Application.persistentDataPath;
 
     public static string GetUnityPath(string path)
     {

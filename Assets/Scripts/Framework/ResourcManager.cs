@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
 
 ///<summary>
-///
+///加载本地资源
 ///</summary>
-public class Test : MonoBehaviour
+public class ResourcManager : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
-        //StartCoroutine(Asyncotor());
+        StartCoroutine(Asyncotor());
     }
-
     /// <summary>
     /// 异步加载有依赖
     /// </summary>
@@ -40,14 +38,14 @@ public class Test : MonoBehaviour
         yield return bundleRequest;
 
         AssetBundle myLoadAssetBundle = bundleRequest.assetBundle;
-        if(myLoadAssetBundle == null)
+        if (myLoadAssetBundle == null)
         {
             Debug.LogError("空包，有内鬼，终止交易");
             yield break;
         }
 
         //加载资源
-        AssetBundleRequest assetRequest = myLoadAssetBundle.LoadAssetAsync<GameObject>("Assets/BuildResources/UI/Prefab/Image.prefab");
+        AssetBundleRequest assetRequest = myLoadAssetBundle.LoadAssetAsync<GameObject>("Assets/BuildResources/UI/Prefab/Image");
         yield return assetRequest;
 
         Object obj = Instantiate(assetRequest.asset);
@@ -74,7 +72,7 @@ public class Test : MonoBehaviour
         yield return bundleRequest;
 
         AssetBundle myLoad = bundleRequest.assetBundle;
-        if(myLoad == null)
+        if (myLoad == null)
         {
             Debug.LogError("包是空的，有内鬼，终止交易");
             yield break;
@@ -84,7 +82,7 @@ public class Test : MonoBehaviour
         AssetBundleRequest assetRequest = myLoad.LoadAssetAsync<GameObject>("Assets/BuildResources/UI/Prefab/Image.prefab");
         yield return assetRequest;
 
-        Object obj =  Instantiate(assetRequest.asset);
+        Object obj = Instantiate(assetRequest.asset);
         GameObject prefab = obj as GameObject;
         if (prefab != null)
         {
@@ -118,20 +116,5 @@ public class Test : MonoBehaviour
         }
 
         bundle.Unload(false);
-    }
-
-    //视频内容
-    IEnumerator Async11()
-    {
-        AssetBundleCreateRequest request = AssetBundle.LoadFromFileAsync(Application.streamingAssetsPath + "/prefab");
-        yield return request;
-
-        AssetBundleRequest bundle = request.assetBundle.LoadAssetAsync("Assets/BuildResources/UI/Prefab/Image.prefab");
-        yield return bundle;
-
-        GameObject go = Instantiate(bundle.asset) as GameObject;
-        go.transform.SetParent(this.transform);
-        go.SetActive(true);
-        go.transform.localPosition = Vector3.zero;
     }
 }

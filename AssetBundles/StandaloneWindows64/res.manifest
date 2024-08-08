@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 457628499
+CRC: 600035550
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8b80a20581c0a8adb0ff48186a1ac98c
+    Hash: 56f5d7d8b1f24b396a19c70e1f8911ad
   TypeTreeHash:
     serializedVersion: 2
     Hash: f267fd2d8bcb1179236b6179ac5313bc
@@ -16,4 +16,5 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/BuildResources/UI/Res/1.png
+- Assets/BuildResources/UI/Res/2.png
 Dependencies: []
